@@ -1,0 +1,293 @@
+/* declaring variables (to store colors) 
+source: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+*/
+:root {
+    --swedenBlue: rgb(20,102,160);
+    --swedenYellow: rgb(251,208,8);
+
+    --denmarkRed: rgb(236,29,37);
+    --denmarkWhite: white;
+
+    --finlandBlue: rgb(20,102,160);
+    --finlandWhite: white;
+
+    --icelandBlue: rgb(14,116,188);
+    --icelandRed: rgb(237,27,36);
+    --icelandWhite: white;
+
+    --plaidGreen: #009444;
+    --plaidDarkGreen: #154713;
+    --plaidBlack: black;
+    --plaidYellow: #FFF200;
+}
+
+/* reset all elements' margin, padding */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ///// TEXT ///// */
+h1, h2 {
+    margin-top: 10px;
+}
+
+/* ///// PAGE LAYOUT ///// */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#firstRow {
+    display: flex;
+    flex-direction: row;
+    /* background-color: darkcyan; */
+    padding: 50px 0 50px 0;
+}
+
+#secondRow {
+    display: flex;
+    flex-direction: row;
+    /* background-color: purple; */
+    padding: 0 0 50px 0;
+}
+
+.spacing {
+    padding-right: 50px;
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////
+///// FLAGS ///////////////////////////// */
+
+
+/* ///// SWEDEN FLAG ///// */
+#swedenFlag {
+    /* use the proportion numbers as the width and height, and multiply by the same scale to retain their aspect ratio */
+    width: calc(25 * 16px);
+    height: calc(25 * 10px);
+
+    display: grid;
+    grid-template-columns: 5fr 2fr 9fr;
+    grid-template-rows: 4fr 2fr 4fr;
+}
+
+/* colors */
+.swedenBlue {
+    background-color: var(--swedenBlue);
+    width: 100%;
+    height: 100%;
+}
+
+.swedenYellow {
+    background-color: var(--swedenYellow);
+    width: 100%;
+    height: 100%;
+}
+
+/* text label */
+#swedenText {
+    color: var(--swedenBlue);
+}
+
+
+
+
+/* ///// DENMARK FLAG ///// */
+#denmarkFlag {
+    width: calc(20 * 17px);
+    height: calc(20 * 14px);
+
+    display: grid;
+    grid-template-columns: 6fr 2fr 9fr;
+    grid-template-rows: 6fr 2fr 6fr;
+}
+
+/* colors */
+.denmarkRed {
+    width: 100%;
+    height: 100%;
+    background-color: var(--denmarkRed);
+}
+
+.denmarkWhite {
+    width: 100%;
+    height: 100%;
+    background-color: var(--denmarkWhite);
+}
+
+/* text label */
+#denmarkText {
+    color: var(--denmarkRed);
+}
+
+
+
+
+/* ///// FINLAND FLAG ///// */
+#finlandFlag {
+    width: calc(20 * 18px);
+    height: calc(20 * 13px);
+
+    display: grid;
+    grid-template-columns: 5fr 3fr 10fr;
+    grid-template-rows: 5fr 3fr 5fr;
+
+    border: 1px solid black;
+}
+
+/* colors */
+.finlandBlue {
+    width: 100%;
+    height: 100%;
+    background-color: var(--finlandBlue);
+}
+
+.finlandWhite {
+    width: 100%;
+    height: 100%;
+    background-color: var(--finlandWhite);
+}
+
+/* text label */
+#finlandText {
+    color: var(--finlandBlue);
+}
+
+
+
+
+
+/* ///// ICELAND FLAG ///// */
+#icelandFlag {
+    width: calc(15 * 25px);
+    height: calc(15* 18px);
+    
+    display: grid;
+    grid-template-columns: 7fr 1fr 2fr 1fr 14fr;
+    grid-template-rows: 7fr 1fr 2fr 1fr 7fr;
+}
+
+/* colors */
+.icelandBlue {
+    width: 100%;
+    height: 100%;
+    background-color: var(--icelandBlue);
+}
+
+.icelandWhite {
+    width: 100%;
+    height: 100%;
+    background-color: var(--icelandWhite);
+}
+
+.icelandRed {    
+    width: 100%;
+    height: 100%;
+    background-color: var(--icelandRed);
+}
+
+/* text label */
+#icelandText {
+    color: var(--icelandBlue);
+}
+
+
+
+
+
+/* ///// CUSTOM PLAID FLAG ///// */
+#plaidFlag {
+    position: relative;
+    width: calc(1.5 * 216px);
+    height: calc(1.5 * 216px);
+}
+
+#plaidFlag-background {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 2fr 17fr;
+    grid-template-rows: 17fr 2fr 1fr 2fr 2fr;
+}
+
+#plaidFlag-lines-horizontal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 14fr;
+}
+
+#plaidFlag-lines-vertical {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: 14fr 2fr 2fr 2fr 2fr 2fr;
+}
+
+/* colors */
+.plaidGreen {
+    width: 100%;
+    height: 100%;
+    background-color: var(--plaidGreen);
+}
+
+.plaidDarkGreen {
+    width: 100%;
+    height: 100%;
+    background-color: var(--plaidDarkGreen);
+}
+
+.plaidYellow {
+    width: 100%;
+    height: 100%;
+    background-color: var(--plaidYellow);
+}
+
+.plaidBlack {
+    width: 100%;
+    height: 100%;
+    background-color: var(--plaidBlack);
+}
+
+/* line colors */
+.plaidLine-horizontal-black {
+    border-bottom: 5px solid var(--plaidBlack);
+}
+
+.plaidLine-horizontal-yellow {
+    border-bottom: 5px solid var(--plaidYellow);
+    z-index: 2;
+}
+
+.plaidLine-vertical-black {
+    border-right: 5px solid var(--plaidBlack);
+}
+
+.plaidLine-vertical-yellow {
+    border-right: 5px solid var(--plaidYellow);
+    z-index: 2;
+}
+
+/* text label */
+#plaidText {
+    color: var(--plaidGreen);
+}
