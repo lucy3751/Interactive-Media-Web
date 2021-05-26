@@ -1,0 +1,120 @@
+/* declaring variables */
+:root {
+    --letterColor: rgb(24, 86, 24);
+    --letterColor: black;
+}
+
+/* reset all element's padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color:#ecdebb; */
+}
+
+.letter {
+    width: 360px;
+    height: 360px;
+    /* border: 1px solid green; */
+    display: inline-block; /* this makes block level elements act like letters (so they sit next to eachother) */
+    position: relative; /* .grid's position is now based on this class  */
+    margin-top: 3.5%;
+}
+
+.grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: 100%;
+    /* background-color: purple; */
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+    position: relative; /* the position of the parts (below) is now based on this div */
+}
+
+/* /////PARTS///// */
+
+/* serif */
+.serif {
+    width: 50%;
+    height: calc(1/8 * 100%);
+    background-color: var(--letterColor);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* serif direction */
+.serif-bottom-left {
+    left: 0;
+    bottom: 0;
+}
+
+.serif-top-right {
+    right: 0;
+    top: 0;
+}
+
+.serif-top-left {
+    left: 0;
+    top: 0;
+}
+
+
+/* vertical serif */
+.vertical-serif {
+    width: calc(1/8 * 100%);
+    height: 50%;
+    background-color: var(--letterColor);
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+
+/* curve */
+.curve {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--letterColor);
+    border-bottom-right-radius: 100%;
+}
+
+/* curve direction */
+.curve-top-left {
+    transform: scale(-1);
+}
+
+.curve-bottom-left {
+    transform: scaleX(-1);
+}
+
+.curve-top-right {
+    transform: scaleY(-1);
+}
+
+/* center stroke that breaks the grid position */
+.centerStroke{
+    position: absolute;
+    top: 50%;
+}
+
+/* square */
+.square {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--letterColor);
+}
+
