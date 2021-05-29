@@ -1,0 +1,238 @@
+
+/* ///// LOADING FONTS ///// */
+/* Poppins - Regular 400, Semi-bold 600, Extra Bold 800 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* ITC American Typewriter - Light Italic 300 */
+@import url("https://use.typekit.net/uef6hfl.css");
+
+
+/* hosting own fonts steps - https://www.youtube.com/watch?v=KzqQXDbDvus&ab_channel=KevinPowell:
+    1. put the font files into an asset/font folder
+    2. @font-face --> link the font files with url
+    3. change font-family, font-weight and font-style values so they actually match the font (Font Squirrel sets weight and style all to normal for some reason)
+*/
+
+/* Quicksand - Bold */
+@font-face {
+    font-family: "Quicksand";
+    src: url("./fonts/quicksand-bold-webfont.woff2") format("woff2"),
+         url("./fonts/quicksand-bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+/* ///// OVERALL /////*/
+/* declaring variables to store color */
+:root {
+    --darkBlue: #1D3557;
+    --yellow: #FBCE1E;
+    --red: #FF4351;
+    --white: #F1FAEE;
+    --lightBlue: #66D0E8;
+}
+
+
+/* browser reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ///// GRID LAYOUT ///// */
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 4fr;
+}
+
+.grid-item {
+    /* testing/reference */
+    /* border: 1px solid black; */
+    /* background-color:darkcyan; */
+
+    /* using display flex to center items horizontally and vertically - https://stackoverflow.com/questions/45536537/centering-in-css-grid */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* make header span entire row */
+#header {
+    /* grid-column-start/end shorthand - https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column */
+    grid-column: 1 / 4;
+}
+
+
+
+/* ///// CONTENT BACKGROUND ///// */
+#glow {
+    background-color: var(--darkBlue);
+}
+
+#snow {
+    background-color: var(--white);
+}
+
+#jump {
+    background-color: var(--red);
+}
+
+
+
+/* ///// TYPOGRAPHY ///// */
+/* Setting a base font size */
+body {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* Header */
+#header {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1em;
+    margin-top: 1.5em;
+}
+
+
+/* Content */
+.content {
+    font-size: 3em;
+}
+
+#glow {
+    font-family: "Quicksand", Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: var(--yellow);
+    letter-spacing: -3px;
+}
+
+#snow {
+    font-family: "itc-american-typewriter", "Courier New", monospace;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--lightBlue);
+}
+
+#jump {
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--yellow);
+}
+
+
+
+/* ///// ANIMATION ///// */
+#glow h2:hover {
+    /* alternate - make animation loop back and forth */
+    animation: glowing 1s ease-in-out infinite alternate;
+}
+
+#snow h2:hover {
+    transform-origin: top;
+    animation: snowing 8s ease-in-out infinite;
+}
+
+#jump h2:hover {
+    transform-origin: bottom;
+    animation: jumping 2s ease infinite;
+}
+
+
+
+/* ///// ANIMATION - KEYFRAMES///// */
+/* glow */
+@keyframes glowing {
+    from {
+        /* css text shadow effect - https://www.w3schools.com/css/css3_shadows.asp */
+        text-shadow: 0px 0px 10px var(--red);
+    }
+
+    to {
+        text-shadow: 
+        0px 0px 20px var(--red), 
+        0px 0px 30px var(--red), 
+        0px 0px 40px var(--red), 
+        0px 0px 50px var(--red), 
+        0px 0px 75px var(--red);
+    }
+}
+
+
+/* snow */
+@keyframes snowing {
+    /* make the snow animation have a little delay everytime it loops  */
+    0% {
+        transform: translate(0%, 0%) rotate(0deg);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(80%, 100%) rotate(30deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-80%, 250%) rotate(-30deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate(0%, 350%) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0%, 350%) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+
+/* jump */
+@keyframes jumping {
+    /* make the jump animation have a little delay everytime it loops  */
+    0% {
+        transform: translateY(0) scaleY(1);    
+    }
+
+    20% {
+        transform: translateY(0px) scaleY(1);
+    }
+
+    50% {
+        transform: translateY(0px) scaleY(0.5);
+    }
+
+    70% {
+        transform: translateY(-200%) scaleY(1.5);
+    }
+
+    80% {
+        transform: translateY(0) scaleY(0.5);
+    }
+     
+    85% {
+        transform: translateY(0) scaleY(0);
+    }
+}
+
