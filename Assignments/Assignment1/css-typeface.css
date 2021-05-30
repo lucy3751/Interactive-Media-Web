@@ -1,0 +1,381 @@
+/* declaring variables */
+:root {
+    /* change color of the letters */
+    /* --letterColor: rgb(24, 86, 24); */
+
+    /* change background color */
+    --bg:white; 
+    --letterColor: black;
+}
+
+/* reset all element's padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:var(--bg);
+    padding: 0 2% 10vh 2%;
+}
+
+.letter {
+    width: calc(0.7 * 360px);
+    height: calc(0.7 * 288px);
+    /* border: 1px solid green; */
+    display: inline-block; /* this makes block level elements act like letters (so they sit next to eachother) */
+    position: relative; /* .grid's position is now based on this class  */
+    margin-top: 10vh;
+}
+
+.grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 0px;
+    width: 100%;
+    height: 100%;
+    /* background-color: purple; */
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    position: relative; /* the position of the parts (below) is now based on this div */
+    /* border: 1px solid green;  */
+}
+
+
+
+
+
+
+/* ///// PARTS //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////*/
+
+
+/* /////SERIF///// 
+//////////////////*/
+
+/* note: serif direction is based on the direction the serif is attached to, unless specified */
+
+/* // SERIF BOTTOM RIGHT // */
+.serif {
+    width: 50%;
+    height: calc(2/8 * 100%);
+    background-color: var(--letterColor);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* circle on serif */
+.serif::before {
+    content: '';
+    /* width and height is now based on .serif */
+    width: calc(27/36 * 100%);
+    height: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    bottom: 0;
+    right: calc(20/32 * 100%);
+}
+
+
+
+/* // SERIF BOTTOM LEFT // */
+.serif-bottom-left {
+    left: 0;
+    bottom: 0;
+}
+
+/* circle on serif */
+.serif-bottom-left::before {
+    content: '';
+    width: calc(27/36 * 100%);
+    height: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    bottom: 0;
+    left: calc(20/32 * 100%);
+}
+
+
+
+/* // SERIF TOP RIGHT // */
+.serif-top-right {
+    right: 0;
+    top: 0;
+}
+
+/* circle on serif */
+.serif-top-right::before {
+    content: '';
+    width: calc(27/36 * 100%);
+    height: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    top: 0;
+    right: calc(20/32 * 100%);
+}
+
+
+
+/* // SERIF TOP LEFT // */
+.serif-top-left {
+    left: 0;
+    top: 0;
+}
+
+/* circle on serif */
+.serif-top-left::before {
+    content: '';
+    width: calc(27/36 * 100%);
+    height: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    top: 0;
+    left: calc(20/32 * 100%);
+}
+
+
+
+/* /////VERTICAL SERIF///// 
+/////////////////////////*/
+
+/* // POINTING UP, CIRCLE FACING LEFT // */
+.vertical-serif {
+    width: calc(2/8 * 100%);
+    height: 50%;
+    background-color: var(--letterColor);
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+
+/* circle on serif */
+.vertical-serif::before {
+    content: '';
+    height: calc(27/36 * 100%);
+    width: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    right: 0;
+    bottom: calc(20/32 * 100%);
+}
+
+
+
+/* // POINTING UP, CIRCLE FACING RIGHT // */
+.vertical-serif-right {
+    width: calc(2/8 * 100%);
+    height: 50%;
+    background-color: var(--letterColor);
+    position: absolute;
+    left:0;
+    bottom: 0;
+}
+
+/* circle on serif */
+.vertical-serif-right::before {
+    content: '';
+    height: calc(27/36 * 100%);
+    width: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    left: 0;
+    bottom: calc(20/32 * 100%);
+}
+
+
+
+/* // POINTING DOWN, CIRCLE FACING LEFT // */
+.vertical-serif-down {
+    width: calc(2/8 * 100%);
+    height: 50%;
+    background-color: var(--letterColor);
+    position: absolute;
+    right:0;
+    top: 0;
+}
+
+/* circle on serif */
+.vertical-serif-down::before {
+    content: '';
+    height: calc(27/36 * 100%);
+    width: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    right: 0;
+    top: calc(20/32 * 100%);
+}
+
+
+
+/* // POINTING DOWN, CIRCLE FACING RIGHT // */
+.vertical-serif-down-right {
+    width: calc(2/8 * 100%);
+    height: 50%;
+    background-color: var(--letterColor);
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+/* circle on serif */
+.vertical-serif-down-right::before {
+    content: '';
+    height: calc(27/36 * 100%);
+    width: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    left: 0;
+    top: calc(20/32 * 100%);
+}
+
+
+
+
+/* // VERTICAL SERIF POINTING DOWN // */
+.vertical-serif-down {
+    width: calc(2/8 * 100%);
+    height: 50%;
+    background-color: var(--letterColor);
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+
+/* circle on serif */
+.vertical-serif-down::before {
+    content: '';
+    height: calc(27/36 * 100%);
+    width: calc(27/18 * 100%);
+    border-radius: 100%;
+    background-color: var(--letterColor);
+    position: absolute;
+    right: 0;
+    bottom: calc(20/32 * 100%);
+}
+
+
+
+
+/* /////CURVE///// 
+//////////////////*/
+.curve {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--letterColor);
+    border-radius: 0 0 100% 0;
+}
+
+
+/* curve direction */
+.curve-top-left {
+    border-radius: 100% 0 0 0;
+}
+
+.curve-bottom-left {
+    border-radius: 0 0 0 100%;
+}
+
+.curve-top-right {
+    border-radius: 0 100% 0 0;
+}
+
+
+/* /////SMALL CURVE - FOR M///// 
+///////////////////////////////////////*/
+
+/* left side */
+.letter-m .curve-small-left {
+    /* background-color: blue; */
+    transform: scale(0.5) translate(50%, -50%);
+}
+
+/* right side*/
+.letter-m .curve-small-right {
+    /* background-color: red; */
+    transform: scale(0.5) translate(-50%, -50%);
+}
+
+/* /////SMALL CURVE - FOR W///// 
+///////////////////////////////////////*/
+
+/* shift right */
+.letter-w .curve-small-right {
+    /* background-color: red; */
+    transform: scale(-0.5) translate(50%, -50%);
+}
+
+/* shift left */
+.letter-w .curve-small-left {
+    /* background-color: blue; */
+    transform: scale(-0.5) translate(-50%, -50%);
+}
+
+
+
+/* /////SQUARE///// 
+//////////////////*/
+.square {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--letterColor);
+}
+
+
+
+
+
+/* ///// CUSTOM POSITIONS (THAT BREAKS THE GRID)/////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////*/
+
+/* center stroke that breaks the grid */
+.centerStroke{
+    position: absolute;
+    top: 50%;
+}
+
+
+/* letter M far left and right curve shift position*/
+.shift-left {
+    transform: translateX(-50%);
+}
+
+
+/* letter M serifs */
+.letter-m .grid-item .serif {
+    transform: translateX(-90%);
+}
+
+.letter-m .grid-item .serif.serif-bottom-left {
+    transform: translateX(90%);
+}
+
+
+/* letter W serifs */
+.letter-w .grid-item .serif {
+    transform: translateX(-90%);
+}
+
+.letter-w .grid-item .serif.serif-top-left {
+    transform: translateX(90%);
+}

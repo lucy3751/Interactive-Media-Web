@@ -1,0 +1,101 @@
+/* Import Poppins typeface from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+/* Import Lora typeface from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+
+
+* { /* Remove default browser spacing */
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 100px; /* Add spacing around the entire page */ 
+    font-size: 12px; /* Setting baseline font size */ 
+    color: #292929;
+}
+
+
+
+/* ///TYPOGRAPHY/// */
+h1 {
+    font-size: 4em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+h2 {
+    font-size: 2.8em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+p,ul {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    font-family: 'Lora', serif;
+}
+figcaption {
+    font-size: 1.25em;
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+/* ///END OF TYPOGRAPHY////*/
+
+
+
+/* ///SPACING AND LAYOUT/// */
+h2 {
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 90px;
+}
+
+.list {
+    margin-bottom: 1.5em;
+}
+
+ul {
+    padding-left: 70px;
+}
+
+figcaption, figure {
+    margin-bottom: 80px;
+}
+
+img {
+    margin-bottom: 10px;
+}
+.process-template {
+    width: 60%; /* Set the width of the template */
+    margin: auto; /* Center align the template by adding auto margins to the left and right */
+}
+.title {
+    margin-bottom: 100px; /* Add spacing to the bottom of the title div */
+}
+
+.section {
+    margin-bottom: 100px;
+}
+/*///END OF SPACING AND LAYOUT/// */
+
+
+
+/* ///MEDIA QUERIES/// */
+/* Adding media queries for page to adapts to tablet and mobile devices */
+@media (max-width: 991px) {
+    .process-template {
+        width: 90%;
+    }
+}
+
+@media (max-width:767px) {
+    body {
+        margin: 40px;
+        font-size: 10px;
+    }
+    .process-template {
+        width: 100%;
+    }
+}
+/* ///END OF MEDIA QUERIES/// */
