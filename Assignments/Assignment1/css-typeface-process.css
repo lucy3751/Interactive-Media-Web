@@ -1,7 +1,7 @@
-/* Import Poppins typeface from Google Fonts */
+/* Import Poppins Semi-bold and Extra bold from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
 
-/* Import Lora typeface from Google Fonts */
+/* Import Lora Regular Italic from Google Fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
 
 
@@ -22,43 +22,72 @@ h1 {
     font-size: 4em;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
+    font-style: normal;
 }
 h2 {
     font-size: 2.8em;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    font-style: normal;
 }
 p,ul {
     font-size: 1.8em;
     line-height: 1.5em;
     font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: normal;
 }
 figcaption {
     font-size: 1.25em;
     font-family: 'Lora', serif;
     font-style: italic;
+    font-weight: normal;
 }
 /* ///END OF TYPOGRAPHY////*/
 
 
 
 /* ///SPACING AND LAYOUT/// */
+/* title at the top */
+.title {
+    margin-bottom: 100px; /* Add spacing to the bottom of the title div */
+}
+
+/* section headings */
 h2 {
     margin-bottom: 40px;
 }
 
+/* paragraphs/body text */
 p {
     margin-bottom: 90px;
 }
 
+
+/* list */
 .list {
     margin-bottom: 1.5em;
 }
 
 ul {
-    padding-left: 70px;
+    margin-left: 70px;
 }
 
+/* creating multilevel list - https://www.computerhope.com/issues/ch001703.htm */
+.list-second-level {
+    /* based on ul selector */
+    margin-left: 7%; 
+    list-style-type: circle;
+}
+
+.list-third-level {
+    /* based on ul selector */
+    margin-left: 14%;
+    list-style: square;
+}
+
+
+/* picture and caption */
 figcaption, figure {
     margin-bottom: 80px;
 }
@@ -66,14 +95,15 @@ figcaption, figure {
 img {
     margin-bottom: 10px;
 }
+
+
+/* the whole template */
 .process-template {
     width: 60%; /* Set the width of the template */
     margin: auto; /* Center align the template by adding auto margins to the left and right */
 }
-.title {
-    margin-bottom: 100px; /* Add spacing to the bottom of the title div */
-}
 
+/* section */
 .section {
     margin-bottom: 100px;
 }
