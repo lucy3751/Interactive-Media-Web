@@ -27,12 +27,13 @@ body {
     height: calc(1 * 288px);
     /* tracking */
     margin-right: 0px;
+    /* leading */
+    margin-top: 10vh;
 
     /* reference/testing purpose */
     /* border: 1px solid green; */
     display: inline-block; /* this makes block level elements act like letters (so they sit next to eachother) */
     position: relative; /* .grid's position is now based on this class  */
-    margin-top: 10vh;
 }
 
 .grid {
