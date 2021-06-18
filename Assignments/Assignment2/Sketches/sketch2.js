@@ -26,12 +26,12 @@ var b = 0;
 
 
 function preload() {
-    firstCursor = loadImage('assets/firstCursor.png');
-    xerox = loadImage('assets/xerox.png');
-    windows = loadImage('assets/windows.png');
-    appleOld = loadImage('assets/appleOld.png');
-    appleNew = loadImage('assets/appleNew.png');
-    ipad = loadImage('assets/ipad.png');
+    firstCursor = loadImage('../assets/firstCursor.png');
+    xerox = loadImage('../assets/xerox.png');
+    windows = loadImage('../assets/windows.png');
+    appleOld = loadImage('../assets/appleOld.png');
+    appleNew = loadImage('../assets/appleNew.png');
+    ipad = loadImage('../assets/ipad.png');
 
 }
 

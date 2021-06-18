@@ -9,7 +9,7 @@
 var img;
 
 function preload() {
-    img = loadImage('assets/nature.jpg');
+    img = loadImage('../assets/nature.jpg');
 }
 
 
