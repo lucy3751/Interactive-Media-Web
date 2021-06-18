@@ -59,7 +59,7 @@ var myFont;
 
 // STORE CURSORS MOVING INCREMENTS/SPEED
 var i = 0;
-var speed = -1;
+var speed = -5;
 
 
 // SETTING A REFERENCE POINT TO STOP THE CURSORS MOVING UP
