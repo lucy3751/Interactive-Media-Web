@@ -1,0 +1,994 @@
+/* /// IMPORTING FONTS /// */
+
+/* Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Work Sans from Google Fonts (as a substitute for Basis Grotesque Pro since I don't have the font) */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
+
+/* /// END OF IMPORTING FONTS */
+
+
+
+/* /// VARIABLES /// */
+:root {
+    /* /// COLORS /// */
+    /* primary */
+    --aqua1: #7AC2BB;
+    --white: #FFFFFF;
+    --yellow1: #F5DE66;
+    --orange1: #D8985F;
+    --pink1: #E3B6CE;
+    --green1: #9EB964;
+    /* secondary  */
+    --aqua2: #487D85;
+    --grey1: #B9C4CB;
+    --yellow2: #FAEDAE;
+    --orange2: #EDD1B9;
+    --pink2: #F1DBE7;
+    --aqua3: #258184;
+    --grey2: #E7EBED;
+    --yellow3: #FCEFAB;
+    --orange3: #BDA483;
+    /* typography */
+    --blue1: #15384F;
+    --grey3: #6E7F87;
+    --black: #272D33;
+    /* error */
+    --red: #D32F36;
+
+
+
+    /* /// SPACING /// */
+    --gap1: 20rem;
+    --gap2: 8rem;   
+    --gap3: 3rem;
+    --gap4: 1.5rem;
+    
+
+    /* /// TYPOGRAPHY /// */
+    --primaryFont: 'Basis Grotesque Pro', 'Work Sans', Helvetica, Arial, sans-serif;
+    --secondaryFont: 'Inter', Helvetica, Arial, sans-serif;
+}
+
+/* /// END OF VARIABLES /// */
+
+
+/* /// GENERAL LAYOUT /// */
+/* browser reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* set base font size */
+html {
+    font-size: 8.5px;
+    width: 100%;
+}
+
+body {
+    font-family: var(--primaryFont);
+    color: var(--blue1);
+    width: 100%;
+}
+
+/* gap between each section */
+.section {
+    padding: var(--gap1) 10rem;
+    width: 100vw;
+}
+
+
+/* gap between the elements and the comment/note */
+.comment {
+    margin-bottom: var(--gap3);
+    width: 35ch;
+}
+
+/* overall layout */
+.grid-container  {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+}
+
+/* Circle beside text - position the circle and text beside each other */
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* Icons in the Buttons/Links */
+/* center the icon */
+.material-icons-round {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 2.5rem;
+}
+
+/* icon colors */
+.material-icons-round.white {
+    color: var(--white);
+}
+
+.material-icons-round.blue {
+    color: var(--blue1);
+}
+
+.material-icons-round.grey {
+color: var(--grey1);
+}
+
+/* /// END OF GENERAL LAYOUT /// */
+
+
+
+/* /// TYPOGRAPHY //// */
+/* headers */
+.header-emphasis {
+    font-family: var(--primaryFont);
+    font-weight: 400;
+    font-size: calc(162.1/8.5 *1rem);
+    text-transform: uppercase;
+}
+
+.h1-common {
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    font-size: calc(76.8/8.5 * 1rem);
+    text-transform: uppercase;
+}
+
+.h1-login {
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    font-size: calc(88/8.5 * 1rem);
+    text-transform: uppercase;
+}
+
+.h1-homepage {
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    font-size: calc(37.5/8.5 * 1rem);
+    text-transform: uppercase;
+}
+
+.h2-common {
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    font-size: calc(56.3/8.5 * 1rem);
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+}
+
+/* add spacing between section heading and subheading */
+.h2-common.heading {
+    margin-bottom: var(--gap2);
+}
+
+.h3-common {
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    font-size: calc(35.8/8.5 * 1rem);
+    text-transform: none;
+}
+
+.h4-common {
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    font-size: calc(27.31/8.5 * 1rem);
+    text-transform: uppercase
+}
+
+.h5-common {
+    font-family: var(--primaryFont);
+    font-weight: 700;
+    font-size: calc(15.36/8.5 * 1rem);
+    text-transform: uppercase
+}
+
+/* add spacing between the element and the section subheadings */
+.h5-common.subheading {
+    margin-bottom: var(--gap3);
+}
+
+
+
+/* body text */
+.p1-common {
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    font-size: calc(22.19/8.5 * 1rem);
+    text-transform: none;
+}
+
+
+.p1-login {
+    font-family: var(--secondaryFont);
+    font-weight: 500;
+    font-size: calc(16/8.5 * 1rem);
+    text-transform: none;
+}
+
+.p2-common {
+    font-family: var(--secondaryFont);
+    font-weight: 300;
+    font-size: calc(17/8.5 * 1rem);
+    text-transform: none;
+}
+
+.p2-homepage {
+    font-family: var(--secondaryFont);
+    font-weight: 300;
+    font-size: calc(13.6/8.5 * 1rem);
+    text-transform: none;
+}
+
+.p2-login {
+    font-family: var(--secondaryFont);
+    font-weight: 500;
+    font-size: calc(14/8.5 * 1rem);
+    text-transform: none;
+}
+
+.p3-common {
+    font-family: var(--secondaryFont);
+    font-weight: 400;
+    font-size: calc(14.5/8.5 * 1rem);
+    text-transform: none;
+}
+
+.p4-common {
+    font-family: var(--secondaryFont);
+    font-weight: 400;
+    font-size: calc(13.6/8.5 * 1rem);
+    text-transform: none;
+}
+
+.p5-common {
+    font-family: var(--secondaryFont);
+    font-weight: 400;
+    font-size: calc(10/8.5 * 1rem);
+    text-transform: none;
+}
+/* /// END OF TYPOGRAPHY /// */
+
+
+
+/* /// TITLE /// */
+#title {
+    width: 100%;
+    background-color: var(--aqua1);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem;
+}
+
+/* remove margin set by h2 styles */
+#title h2 {
+    margin:0;
+}
+
+/* logo */
+img {
+    width: 20rem;
+}
+/* /// END OF TITLE */
+
+
+
+/* /// COLORS LAYOUT /// */
+#colors {
+    width: 100%;
+}
+
+/* overall grid */
+#colors .grid-container {
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+/* each section grid */
+.colors-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    column-gap: calc(var(--gap3)/2);
+    row-gap: calc(var(--gap3)/2);
+}
+
+
+/* Each color blocks */
+.color-blocks {
+    /* set base position for the hex codes' position */
+    position: relative;
+
+    height: 11rem;
+    width: 11rem;
+    border-radius: 10%;
+}
+
+/* Hex code text */
+.color-blocks p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    font-size: calc(17/8.5 *1rem);
+}
+
+/* /// END OF COLORS LAYOUT /// */
+
+
+
+/* /// COLOR BLOCKS  /// */
+/* Assign Primary Colors */
+#aqua1 {
+    background-color: var(--aqua1);
+}
+
+#white {
+    background-color: var(--white);
+    border: 1px solid var(--blue1);
+}
+
+#yellow1 {
+    background-color: var(--yellow1);
+}
+
+#orange1 {
+    background-color: var(--orange1);
+}
+
+#pink1 {
+    background-color: var(--pink1);
+}
+
+#green1 {
+    background-color: var(--green1);
+}
+
+
+/* Assign Secondary Colors */
+#aqua2 {
+    background-color: var(--aqua2);
+}
+
+#grey1 {
+    background-color: var(--grey1);
+}
+
+#yellow2 {
+    background-color: var(--yellow2);
+}
+
+#orange2 {
+    background-color: var(--orange2);
+}
+
+#pink2 {
+    background-color: var(--pink2);
+}
+
+#aqua3 {
+    background-color: var(--aqua3);
+}
+
+#grey2 {
+    background-color: var(--grey2);
+}
+
+#yellow3 {
+    background-color: var(--yellow3);
+}
+
+#orange3 {
+    background-color: var(--orange3);
+}
+
+
+/* Assign Typography Colors */
+#blue1 {
+    background-color: var(--blue1);
+}
+
+#grey3 {
+    background-color: var(--grey3);
+}
+
+#black {
+    background-color: var(--black);
+}
+
+
+/* Assign Error Colors */
+#red {
+    background-color: var(--red);
+}
+
+
+/* Make text white to be more legible */
+#aqua1, #aqua2, #aqua3, #blue1, #grey3, #black, #red {
+    color: var(--white);
+}
+
+/* /// END OF COLOR BLOCKS /// */
+
+
+
+/* /// HEADERS TEXT /// */
+#headersText {
+    width: 100%;
+}
+
+#headersText h2, #headersText h3, #headersText h4, #headersText h5 {
+    width: 80%;
+}
+
+/* space between each heading */
+#headersText h2 {
+    margin-bottom: var(--gap2);
+}
+
+/* space between each type of heading */
+#headersText .h1-homepage, #headersText .h2-common, #headersText .h3-common, #headersText .h4-common{
+    margin-bottom: var(--gap1);
+}
+
+/* set headers text heading back to normal gap */
+#headersText .h2-common.heading {
+    margin-bottom: var(--gap2);
+}
+/* /// END OF HEADERS TEXT /// */
+
+
+
+/* /// BODY COPY TEXT /// */
+#bodyCopy {
+    width: 100%;
+}
+
+/* layout */
+.bodyCopy-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5 1fr);
+    column-gap: 5rem;
+}
+
+#bodyCopy .grid-item {
+    width: 100%;
+}
+
+#bodyCopy p {
+    margin-bottom: var(--gap2);
+    width: 80%;
+}
+
+/* /// END OF BODY COPY TEXT /// */
+
+
+
+/* /// TEXT LINKS /// */
+#textLinks {
+    width: 100%;
+}
+
+/* switch cursor to pointer */
+#textLinks .content, .underline {
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* circle besdie first link text */
+.links-circle {
+    position: relative;
+    background-color: var(--blue1);
+    width: calc(20/8.5 *1rem);
+    height: calc(20/8.5 *1rem);
+    border-radius: 100%;
+    margin-left: 0.5rem;
+}
+
+/* adjust arrow icon size */
+.chevron {
+    font-size: calc(13/8.5 *1rem);
+    color: white;
+}
+
+/* underline link */
+.underline {
+    color: var(--aqua1);
+    border-bottom: 1px solid var(--aqua1);
+    margin-bottom: var(--gap2);
+}
+
+
+/* /// END OF TEXT LINKS /// */
+
+
+
+/* /// FONTS AND FONT STACK /// */
+#fontStack {
+    width: 100%;
+}
+
+/* Basis Grotesque */
+#fontStack-primary {
+    font-family: var(--primaryFont);
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: var(--gap2);
+    width: 100%;
+}
+
+/* Inter */
+#fontStack-secondary {
+    font-family: var(--secondaryFont);
+    font-weight: 400;
+    font-size: 4rem;
+    width: 100%;
+}
+
+/* /// END OF FONTS AND FONT STACK /// */
+
+
+
+/* /// BUTTONS /// */
+/* get rid of the borders of all buttons, change cursor to pointer */
+button {
+    border: none;
+    cursor: pointer;
+}
+
+#buttons {
+    background-color: var(--aqua1);
+    width: 100%;
+}
+
+#buttons .grid-container {
+    width: 100%;
+}
+
+#buttons .grid-item {
+    width: 80%;
+}
+
+/* Primary Button Styling */
+.buttons-primary1 {
+    background-color: var(--blue1);
+    border-radius: 5rem;
+    min-height: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    /* typography */
+    font-family: var(--primaryFont);
+    font-size: 1.17rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+
+    margin-bottom: var(--gap4);
+}
+
+/* Primary Button - Hover*/
+.buttons-primary1.hover {
+    background-color: var(--white);
+    color: var(--blue1);
+    margin-right: var(--gap4);
+}
+
+/* Primary Button - Hover - Pink */
+.buttons-primary1.hover.pink {
+    background-color: var(--pink1);
+}
+
+/* Primary Button - Hover - Orange */
+.buttons-primary1.hover.orange {
+    background-color: var(--orange1);
+}
+
+
+/* Primary Button - inactive */
+.buttons-primary1.inactive {
+    background-color: var(--aqua2);
+    color: var(--aqua1);
+    cursor: not-allowed;
+}
+
+
+/* Primary Button 2 Styling */
+.buttons-primary2 {
+    background-color: var(--blue1);
+    border-radius: 5rem;
+    min-height: 5rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+
+    /* typography */
+    font-family: var(--primaryFont);
+    font-size: 1.17rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+
+    margin-right: var(--gap4);
+}
+
+.circle {
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem; 
+    min-width: 1rem;
+    margin: 0;
+    margin-left: 1.2rem;
+}
+
+/* Primary Button 2 - Hover */
+.circle.hover {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+}
+
+
+
+/* Secondary Button Styling */
+.buttons-secondary {
+    border: 0.25rem solid var(--blue1);
+    background-color: transparent;
+    border-radius: 5rem;
+    min-height: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    /* typography */
+    font-family: var(--primaryFont);
+    font-size: 1.17rem;
+    font-weight: 700;
+    color: var(--blue1);
+    text-transform: uppercase;
+}
+
+/* Secondary Button - Hover */
+.buttons-secondary.hover {
+    background-color: var(--blue1);
+    color: var(--white);
+}
+
+
+
+/* Cicle Buttons */
+.buttons-circle {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    margin-right: var(--gap4);
+
+    background-color: var(--blue1);
+
+    /* icon position based on its parent */
+    position: relative;
+}
+
+.buttons-circle.green {
+    background-color: var(--green1);
+}
+
+.buttons-circle.orange {
+    background-color: var(--orange1);
+}
+
+.buttons-circle.pink {
+    background-color: var(--pink1);
+}
+
+.buttons-circle.yellow {
+    background-color: var(--yellow1);
+}
+
+
+/* Circle Buttons - inactive */
+.buttons-circle.inactive {
+    background-color: transparent;
+    border: 0.25rem solid var(--grey1);
+}
+
+/* /// END OF BUTTONS /// */
+
+
+
+/* /// INPUTS /// */
+#inputs {
+    width: 100%;
+}
+
+#inputs .grid-container {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;;
+}
+
+#inputs .grid-item {
+    width: 80%;
+}
+
+/* input bar - inactive state */
+.input-bar {
+    min-height: 5rem;
+    border-radius: calc(8/8.5 * 1rem);
+    background-color: var(--grey2);
+
+    /* input text's position is based on this */
+    position: relative;
+}
+
+/* input bar - active state */
+.input-bar.active {
+    border: 0.25rem solid var(--aqua1);
+}
+
+/* input bar - error */
+.input-bar.error {
+    border: 0.25rem solid var(--red);
+}
+
+
+/* input information (above the bar) - inactive state  */
+#inputs .p2-login {
+    margin-bottom: calc(8/8.5 *1rem);
+}
+
+/* input infromation - active state */
+.input-information.active {
+    color: var(--aqua1);
+}
+
+/* input information - error */
+.p2-login.error {
+    color: var(--red);
+}
+
+.p2-login.bottom.error {
+    margin: 0;
+    margin-top: calc(8/8.5 * 1rem);
+}
+
+
+/* input text */
+#inputs .p1-login {
+    margin-left: calc(15/8.5 * 1rem);
+    margin-right: 3rem;
+
+    /* center the text */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--grey3);
+}
+
+
+/* success state - button underneath the input */
+#inputs .buttons-primary1 {
+    margin-top: calc(3/4 * 5rem);
+}
+
+/* /// END OF INPUTS /// */
+
+
+
+
+/* /// MEDIA QUERIES /// */
+@media (max-width: 1120px){
+
+    html {
+        font-size: 10px;
+    }
+
+    /* set width of comments */
+    .comment {
+        width: 80vw;
+    }
+
+    /* shrink logo */
+    #title img {
+        width: 15rem;
+    }
+
+    /* shrink space between each section */
+    .section {
+        padding: var(--gap2) 5rem;
+    }
+
+    /* set all layout to be one column */
+    .grid-container, .bodyCopy-grid-container {
+        display: block;
+    }
+
+    /* add spacing between each subgroup */
+    .grid-item {
+        margin-top: var(--gap2);
+    }
+
+    /* /// COLORS /// */
+    /* set each color block to fit the grid */
+    .grid-item {
+        width: fit-content;
+    }
+    /* /// END OF COLORS /// */
+
+
+    /* /// TYPOGRAPHY / HEADERS TEXT ///*/
+    /* set their width to 100% */
+    #headersText h2, #headersText h3, #headersText h4, #headersText h5 {
+        width: 100%;
+    }
+    
+    .header-emphasis {
+        font-size: 6.5rem;
+    }
+
+    .h1-common {
+        font-size: 4.5rem;
+    }
+
+    .h1-homepage, .h2-common {
+        font-size: 3.8rem;
+    }
+
+    .h1-login, .h3-common, .h4-common {
+        font-size: 3rem;
+    }
+
+    .h5-common {
+        font-size: 1.4rem;
+    }
+
+
+    /* space between each heading */
+    #headersText h2 {
+        margin-bottom: var(--gap3);
+    }
+
+    /* space between each type of heading */
+    #headersText .h1-homepage, #headersText .h2-common, #headersText .h3-common, #headersText .h4-common{
+        margin-bottom: var(--gap2);
+    }
+
+    /* /// END OF TYPOGRAPHY / HEADERS TEXT ///*/
+
+
+    /* /// BODY COPY TEXT /// */
+    /* set their width to 45% */
+    #bodyCopy p {
+        width: 45%;
+    }
+    /* /// END OF BODY COPY TEXT /// */
+  
+    
+    /* /// BUTTONS /// */
+    /* set their width to 100% */
+    #buttons .grid-item {
+        width: 100%;
+    }
+    /* /// END OF BUTTONS /// */
+
+
+
+}
+
+
+@media (max-width: 844px){
+ 
+
+    /* /// TITLE /// */
+    #title {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    img {
+        width: 10rem;
+        margin-bottom: var(--gap4);
+    }
+    /* /// END OF TITLE /// */
+
+
+    /* /// COLORS /// */
+    /* set columns to three */
+    .colors-grid-container {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    /* get rid of the spacer in Secondary Colors */
+    .spacer {
+        display:none;
+    }
+
+    /* remove the extra spacing after the Error subgroup */
+    #colors-error .colors-grid-container {
+        grid-template-rows: 1fr;
+    }
+    /* /// END OF COLORS /// */
+
+    /* /// INPUTS /// */
+    /* set their width to 100% */
+    #inputs .grid-item {
+        width: 100%;
+    }
+    /* /// END OF INPUTS /// */
+}
+
+
+@media (max-width: 569px){
+
+    /* /// BODY COPY TEXT /// */
+    /* set their width to 70% */
+    #bodyCopy p {
+        width: 70%;
+    }
+    /* /// END OF BODY COPY TEXT /// */
+
+}
+
+
+@media (max-width: 482px) {
+   
+    html {
+        font-size: 9px;
+    }
+
+    /* /// BODY COPY TEXT /// */
+    /* set their width to 100% */
+    #bodyCopy p {
+        width: 100%;
+    }
+    /* /// END OF BODY COPY TEXT /// */
+}
+
+
+@media (max-width: 376px) {
+    
+    html {
+        font-size: 8px;
+    }
+}
+
+
+@media (max-width: 321px){
+
+    html {
+        font-size: 7px;
+    }
+}
+
+
+@media (max-width: 281px){
+
+    html {
+        font-size: 6px;
+    }
+}
+/* /// END OF MEDIA QUERIES /// */
