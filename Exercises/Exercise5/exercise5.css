@@ -1,0 +1,29 @@
+/* browser reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* set base width and height */
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* make image occupy full width */
+#imageContainer {
+    width: 100%;
+    text-align: center;
+}
+
+/* horizontally align image - https://stackoverflow.com/questions/114543/how-to-horizontally-center-an-element */
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+
+
+

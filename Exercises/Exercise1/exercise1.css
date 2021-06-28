@@ -1,0 +1,62 @@
+/* browser reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 2% 0;
+}
+
+/* header */
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 3vw;
+}
+
+
+/* make image occupy half of the window */
+#imageContainer {
+    width: 100%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+/* horizontally align image - https://stackoverflow.com/questions/114543/how-to-horizontally-center-an-element */
+img {
+    width: 80%;
+    display: inline-block;
+}
+
+
+
+
+
+/* /// MEDIA QUERIES ///*/
+@media (max-width: 992px) {
+
+    /* make image expand */
+    img {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 481px){
+
+    /* make header bigger */
+    h1{
+        font-size: 20px;
+    }
+
+    /* make image expand almost the full width of the screen */
+    img {
+        width: 95%;
+    }
+}
+
