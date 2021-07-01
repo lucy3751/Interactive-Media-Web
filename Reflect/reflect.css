@@ -1,5 +1,9 @@
-/* import IBM Plex Mono 700 and IBM Plex Sans 300 */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=IBM+Plex+Sans:wght@300&display=swap');
+/* import IBM Plex Sans 300, 500, 700 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&display=swap');
+
+/* import IBM Plex Mono 700 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+
 
 /* variables */
 :root {
@@ -35,10 +39,28 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: var(--plexMono);
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 1em;
+}
+
 p {
     font-family: var(--plexSans);
     font-weight: 300;
     font-size: 24px;
+    margin-bottom: 2em;
+}
+
+strong {
+    font-family: var(--plexSans);
+    font-weight: 500;
+    font-size: 24px
+}
+
+.new-subheading {
+    margin-top: 1em;
 }
 /* /// END OF TYPOGRAPHY /// */
 
@@ -55,7 +77,6 @@ body {
 }
 
 #header {
-    /* background-color: purple; */
     display: flex;
         justify-content: space-between;
         align-items: center;
@@ -79,7 +100,12 @@ body {
         margin-bottom: 48px;
     }
 
-    p {
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p,strong {
         font-size: 20px;
     }
 }
@@ -94,8 +120,13 @@ body {
         display: block;
     }
 
-    p {
+    h2 {
+        font-size: 27px;
+    }
+
+    p,strong {
         font-size: 17px;
+        
     }
 
     h1 {

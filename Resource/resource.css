@@ -77,7 +77,7 @@ p, a {
 /* /// MOBILE FIRST APPROACH - LAYOUT/// */
 body {
     padding: 0 12px;
-    background-color: var(--green);
+    /* background-color: var(--green); */
 }
 
 h1 {
