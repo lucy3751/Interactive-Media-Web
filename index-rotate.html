@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my index!</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- GO BACK BUTTON (to the landing page) -->
+    <div id="goBackButton" class="rotate">
+        <img id="goBackButton-img" src="./assets/go-back.svg" alt="go back button">
+    </div>
+    <!-- END OF GO BACK BUTTON -->
+
+    <!-- ROTATE SCREEN MESSAGE (if screen size is < 769px)  -->
+    <div id="rotateScreen-wrapper">
+        <img id="rotateScreen-image" src="./assets/rotate-screen.svg" alt="rotate screen image">
+        <p id="rotateScreen-message">Please rotate your device to view this site</p>
+    </div>
+    <!-- END OF ROTATE SCREEN MESSAGE -->
+
+
+    <!-- jQuery script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- custom script -->
+    <script src="index-rotate.js"></script>
+</body>
+
+</html>

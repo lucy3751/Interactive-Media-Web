@@ -1,11 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my index!</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>Index</h1>
-    <p>This is the index page.</p>
+
+    <!-- VENDING MACHINE -->
+    <div id="vendingMachine">
+
+        <!-- VENDING MACHINE IMAGE -->
+        <div id="machine-img-container">
+            <img id="machine-img" src="./assets/vendingMachine.svg" alt="vending machine image">
+        </div>
+        <!-- END OF VENDING MACHINE IMAGE -->
+
+        <!-- THE ACTUAL CODING STUFF -->
+        <div id="overlay">
+
+            <!-- SMILEY -->
+            <div id="smiley-wrapper">
+                <!-- left smiley -->
+                <div class="smiley left">
+                    <img class="smiley-img" src="./assets/smiley.svg" alt="smiley face">
+                </div>
+                <!-- end of left smiley -->
+
+                <!-- right smiley -->
+                <div class="smiley right">
+                    <img class="smiley-img" src="./assets/smiley.svg" alt="smiley face">
+                </div>
+                <!-- end of right smiley -->
+            </div>
+            <!-- END OF SMILEY -->
+
+            <!-- KEYPAD AND DISPLAY -->
+            <div id="keypad-display-wrapper">
+                <!-- display -->
+                <div id="display">
+                    <img id="display-img" src="./assets/display.svg" alt="display">
+                    <div id="display-text"></div>
+                </div>
+                <!-- end of display -->
+
+
+                <!-- keypad -->
+                <div id="keypad-wrapper">
+                    <div class="keypad-row-wrapper">
+                        <!-- A key -->
+                        <div class="keypad-large" id="keypad-A">
+                            <img class="keypad-img" src="./assets/a-key.svg" alt="key a">
+                        </div>
+                        <!-- end of A key -->
+
+                        <!-- B key -->
+                        <div class="keypad-large" id="keypad-B">
+                            <img class="keypad-img" src="./assets/b-key.svg" alt="key b">
+                        </div>
+                        <!-- end of B key -->
+                    </div>
+
+                    <div class="keypad-row-wrapper">
+                        <!-- 1 key -->
+                        <div class="keypad" id="keypad-1">
+                            <img class="keypad-img" src="./assets/1-key.svg" alt="key 1">
+                        </div>
+                        <!-- end of 1 key -->
+
+                        <!-- 2 key -->
+                        <div class="keypad" id="keypad-2">
+                            <img class="keypad-img" src="./assets/2-key.svg" alt="key 2">
+                        </div>
+                        <!-- end of 2 key -->
+
+                        <!-- 3 key -->
+                        <div class="keypad" id="keypad-3">
+                            <img class="keypad-img" src="./assets/3-key.svg" alt="key 3">
+                        </div>
+                        <!-- end of 3 key -->
+                    </div>
+
+                    <div class="keypad-row-wrapper">
+                        <!-- 4 key -->
+                        <div class="keypad" id="keypad-4">
+                            <img class="keypad-img" src="./assets/4-key.svg" alt="key 4">
+                        </div>
+                        <!-- end of 4 key -->
+
+                        <!-- 5 key -->
+                        <div class="keypad" id="keypad-5">
+                            <img class="keypad-img" src="./assets/5-key.svg" alt="key 5">
+                        </div>
+                        <!-- end of 5 key -->
+
+                        <!-- 6 key -->
+                        <div class="keypad" id="keypad-6">
+                            <img class="keypad-img" src="./assets/6-key.svg" alt="key 6">
+                        </div>
+                        <!-- end of 6 key -->
+                    </div>
+
+                    <div class="keypad-row-wrapper">
+                        <!-- GO key -->
+                        <div class="keypad-extraLarge" id="keypad-go">
+                            <img class="go-img" src="./assets/go-key.svg" alt="key go">
+                        </div>
+                        <!-- end of GO key -->
+                    </div>
+                </div>
+                <!-- end of keypad  -->
+            </div>
+            <!-- END OF KEYPAD AND DISPLAY -->
+
+            <!-- LANDING SECTION -->
+            <div id="landingSection"></div>
+            <!-- END OF LANDING SECTION -->
+
+        </div>
+        <!-- END OF THE ACTUAL CODING STUFF -->
+
+    </div>
+    <!-- END OF VENDING MACHINE -->
+
+
+
+    <!-- GO BACK BUTTON (to the landing page) -->
+    <div id="goBackButton">
+        <img id="goBackButton-img" src="./assets/go-back.svg" alt="go back button">
+    </div>
+    <!-- END OF GO BACK BUTTON -->
+
     
+
+    <!-- jQuery script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- custom script -->
+    <script src="index.js"></script>
 </body>
+
 </html>

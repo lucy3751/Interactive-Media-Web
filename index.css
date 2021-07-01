@@ -1,0 +1,421 @@
+/* import Orbitron Extra-bold 800 from Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+
+/* 
+HOSTING FONTS - Clash Grotesk from Indian Type Foundry
+https://www.fontshare.com/fonts/clash-grotesk
+*/
+
+/* Clash Grotesk - Medium */
+@font-face {
+    /* font-family: 'ClashGrotesk-Medium'; */
+    font-family: 'ClashGrotesk';
+    src: url('./fonts/ClashGrotesk-Medium.woff2') format('woff2'),
+         url('./fonts/ClashGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+
+/* /// DECLARING VARIABLES /// */
+:root {
+    --black: #171717;
+    --white: white;
+    --red: #F13F3F;
+    --green: #33C16C;
+    --orange: #FFD60A;
+    --yellow: #FDF7E8;
+    --blue: #02398C;
+}
+/* /// END OF DECLARING VARIABLES /// */
+
+
+/* /// BROSWER RESET /// */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* /// END OF BROSWER RESET /// */
+
+
+/* /// OVERALL LAYOUT /// */
+/* set base width to take up the window */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* div containing everything */
+#vendingMachine {
+    /*change this to change the size of the vending machine*/
+    width: 100%;
+
+    /* background-color: green; */
+    
+    /* #overlay position depends on this */
+    position: relative;
+}
+/* /// END OF OVERALL LAYOUT /// */
+
+
+
+/* /// VENDING MACHINE IMAGE LAYOUT /// */
+
+/* set vending machine image to occupy full width */
+#machine-img-container {
+    width: 100%;
+}
+
+#machine-img {
+    width: 100%;  
+}
+/* /// END OF VENDING MACHINE IMAGE LAYOUT */
+
+
+
+/* /// VENDING MACHINE KEYPAD DISPLAY LAYOUT /// */
+
+/* lay the parent div on top of the vending machine image */
+#overlay {
+    /* background-color: rgba(208, 83, 240, 0.5); */
+    width: 100%;
+    height: 100%;
+
+    /* position based on #vendingMachine (its parent) */
+    position: absolute;
+        top: 0;
+        left: 0;
+}
+
+/* whole keypad and display container */
+#keypad-display-wrapper {
+    background-color: rgba(223, 223, 71, 0.5);
+    z-index: 10;
+    /* percentages based on its parent - #overlay */
+    width: calc(165.22/1282 * 100%);
+    height: calc(258.66/2157 * 100%);
+    position: absolute;
+        right: calc(43.47/1282 * 100%);
+        top: calc(779.43/2157 * 100%);
+    
+    display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-items: center;
+}
+
+
+/* display container */
+#display {
+    /* background-color: rgba(83, 240, 180, 0.5); */
+    width: 100%;
+    height: calc(47.78/258.66 * 100%);
+
+    /* #display-text positioning based on this */
+    position: relative;
+}
+
+/* keypad containers */
+#keypad-wrapper {
+    background-color: rgba(83, 240, 180, 0.5);
+    width: calc(124.59/165.22 * 100%);
+    height: calc(184.42/258.66 * 100%);
+
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+
+.keypad-row-wrapper {
+    width: 100%;
+    height: calc(36.86/184.42 * 100%);
+    display: flex;
+        justify-content: space-between;
+}
+
+
+/* types of keypads */
+.keypad-large {
+    /* border: 1px solid black; */
+    width: calc(58.29/124.59 * 100%);
+    height: 100%;
+}
+
+.keypad {
+    /* border: 1px solid purple; */
+    width: calc(36.86/124.59 * 100%);
+    height: 100%;
+}
+
+.keypad-extraLarge {
+    /* border: 1px solid orange; */
+    width: 100%;
+    height: 100%;
+}
+
+/* keypad and display images */
+.keypad-img {
+    width: 100%;
+    height: 100%;
+}
+
+#display-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* text on the display */
+#display-text {
+    /* background: purple; */
+
+    font-family: 'Orbitron', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+    color: var(--red);
+    text-align: center;
+    text-transform: uppercase;
+
+    /* positioning based on #display */
+    position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+}
+
+
+/* cursors */
+.keypad-large, .keypad, .keypad-extraLarge {
+    cursor: pointer;
+}
+
+#display-text {
+    cursor: default;
+}
+/* /// END OF VENDING MACHINE KEYPAD DISPLAY LAYOUT /// */
+
+
+
+/* /// GO BUTTON /// */
+
+/* draw the button using css*/
+#keypad-go {
+    width: 100%;
+    background-color: var(--white);
+    /* border: 0.35vw solid var(--black); */
+    border-radius: 3vw;
+    position: relative;
+}
+
+/* style the text */
+.go-img {
+    width: 102%;
+    position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%); 
+}
+/* /// END OF GO BUTTON */
+
+
+
+/* /// GO BUTTON ANIMATION /// */
+#keypad-go.active {
+    animation: glowing 1s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes glowing {
+    from {
+        /* border-color: var(--red); */
+        background-color: var(--white);
+    }
+
+    to {
+        background-color: var(--green);
+     }
+}
+/* /// GO BUTTON ANIMATION /// */
+
+
+
+/* /// SMILEY AND ANIMATION /// */
+#smiley-wrapper {
+    /* background-color: rgba(162, 194, 55,0.5); */
+    width: calc(1035.21/1282 * 100%);
+    height: calc(155.49/2157 * 100%);
+    position: absolute;
+        right: calc(125.39/1282 * 100%);
+        top: calc(129.01/2157 * 100%);
+    display: flex;
+        justify-content: space-between;
+}
+
+.smiley {
+    /* background-color: purple; */
+    width: calc(155.49/1035.21 * 100%);
+    height: 100%;
+}
+
+.smiley-img {
+    width: 100%;
+    height: 100%;
+}
+
+.smiley.left {
+    animation: spinning 5s linear infinite reverse;
+}
+
+.smiley.right {
+    animation: spinning 5s linear infinite;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+/* /// END OF SMILEY AND ANIMATION /// */
+
+
+
+/* /// LANDING SECTION /// */
+#landingSection {
+    width: 100%;
+    height: calc(650/2157 * 100%);
+    position: absolute;
+        top: calc(512.34/2157 * 100%);
+        right: 0;
+    background-color: rgb(138, 204, 51,0.5);
+}
+/* /// END OF LANDING SECTION /// */
+
+
+
+/* /// GO BACK BUTTON /// */
+#goBackButton {
+    cursor: pointer;
+    position: fixed;
+        bottom: 4%;
+        left: 1%;
+    width: 10%;
+    z-index: 100;
+    /* background-color: purple; */
+}
+
+#goBackButton-img {
+    width: 100%;
+    height: 100%;
+}
+/* /// END OF GO BACK BUTTON /// */
+
+
+
+/* /// ROTATE SCREEN MESSAGE - (for index-rotate.html) /// */
+/* percentage based on body */
+#rotateScreen-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: var(--orange);
+    /* background-color: rgba(202, 153, 61,0.5); */
+    position: fixed;
+        top: 0;
+        left: 0;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+#rotateScreen-image {
+    /* background-color: darkcyan; */
+    width: 40%;
+    margin-bottom: 5%;
+
+    animation: rotateScreen 1.5s cubic-bezier(.61,0,.5,1) infinite;
+}
+
+/* animate image rotating */
+@keyframes rotateScreen {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    20% {
+        transform: rotateZ(0deg);
+    }
+
+    80% {
+        transform: rotateZ(90deg);
+    }
+
+    100% {
+        transform: rotateZ(90deg);
+    }
+}
+
+
+#rotateScreen-message {
+    /* background-color: purple; */
+    padding: 10%;
+    font-family: 'ClashGrotesk', Helvetica, Arial, sans-serif;
+    font-size: 7vw;
+    text-align: center;
+}
+/* /// END OF ROTATE SCREEN MESSAGE /// */
+
+
+
+/* /// MEDIA QUERIES /// */
+@media (max-width: 1025px){
+
+    /* enlarge go back button */
+    #goBackButton {
+        width: 15%;
+        left: 0.5%;
+    }
+
+    /* enlarge back button in the rotate message screen */
+    #goBackButton.rotate {
+        width: 20%;
+    }
+}
+
+
+/* fine ajust go button from shifting up to the keypad */
+@media (max-width: 450px){
+    #keypad-go {
+        top: 10%;
+    }
+}
+
+@media (max-width: 416px){
+    #keypad-go {
+        top: 30%;
+    }
+}
+
+@media (max-width: 351px){
+    #keypad-go {
+        top: 50%;
+    }
+}
+
+/* enlarge go back button size in rotate message screen */
+@media (max-width: 351px){
+
+    #goBackButton.rotate {
+        width: 30%;
+    }
+  
+}
+/* /// END OF MEDIA QUERIES /// */

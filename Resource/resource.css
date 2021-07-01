@@ -11,12 +11,15 @@ Import fonts from Adobe Fonts
 :root {
 
     /* // COLORS // */
-    --black: rgb(24, 24, 24);
     --blue: rgb(65, 96, 236);
+    --black: #171717;
+    --white: white;
+    --green: #71C767;
+    --yellow: #71C767;
 
     /* // FONTS // */
-    --primaryFont:  'obviously', sans-serif;
-    --secondaryFont: 'neue-haas-grotesk-text', sans-serif;
+    --primaryFont:  'obviously', Helvetica, Arial, sans-serif;
+    --secondaryFont: 'neue-haas-grotesk-text', Helvetica, Arial, sans-serif;
 
     /* // SPACING/GAPS // */
     --gap1: 80px;
@@ -59,7 +62,7 @@ h2 {
     font-size: calc(30/17 * 1rem);
 }
 
-a {
+p, a {
     font-family: var(--secondaryFont);
     font-weight: 400;
     font-style: normal;
@@ -67,12 +70,14 @@ a {
     line-height: 1.5em;
 }
 
+
 /* /// END OF TYPOGRAPHY /// */
 
 
 /* /// MOBILE FIRST APPROACH - LAYOUT/// */
 body {
     padding: 0 12px;
+    background-color: var(--green);
 }
 
 h1 {

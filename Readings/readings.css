@@ -1,0 +1,472 @@
+/* 
+HOSTING FONTS - Clash Grotesk from Indian Type Foundry
+https://www.fontshare.com/fonts/clash-grotesk
+*/
+
+
+/* Clash Grotesk - Regular */
+@font-face {
+    /* font-family: 'ClashGrotesk-Regular'; */
+    font-family: 'ClashGrotesk';
+    src: url('../fonts/ClashGrotesk-Regular.woff2') format('woff2'),
+         url('../fonts/ClashGrotesk-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+/* Clash Grotesk - Medium */
+@font-face {
+    /* font-family: 'ClashGrotesk-Medium'; */
+    font-family: 'ClashGrotesk';
+    src: url('../fonts/ClashGrotesk-Medium.woff2') format('woff2'),
+         url('../fonts/ClashGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* Clash Grotesk - Semibold */
+@font-face {
+    /* font-family: 'ClashGrotesk-Semibold'; */
+    font-family: 'ClashGrotesk';
+    src: url('../fonts/ClashGrotesk-Semibold.woff2') format('woff2'),
+         url('../fonts/ClashGrotesk-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* Clash Grotesk - Bold*/
+@font-face {
+    /* font-family: 'ClashGrotesk-Bold'; */
+    font-family: 'ClashGrotesk';
+    src: url('../fonts/ClashGrotesk-Bold.woff2') format('woff2'),
+         url('../fonts/ClashGrotesk-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* /// VARIBLES /// */
+:root {
+
+    /* // COLORS // */
+    --red: #BB3441;
+    --black: #2F2F36;
+    --blue: #76c7fa;
+    --green1: #BDCBB4;
+    --green2: #8BB96E;
+    --yellow1: #FFFAEE;
+    --yellow2: #DAAF49; 
+    --white: #F7F7F7;
+
+    
+    /* // SPACING/GAPS // */
+    --gap1: 100px;
+    --gap2: 60px;
+    --gap3: 40px;
+    --gap4: 20px;
+
+}
+/* /// END OF VARIABLES /// */
+
+
+
+/* ///BROWSER RESET /// */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ///END OF BROWSER RESET /// */
+
+
+
+/* /// TYPOGRAPHY /// */
+/* set base font size - based on smallest size */
+html {
+    font-size: 12px;
+    font-size: 0.85vw;
+}
+
+/* reading title */
+h2 {
+    font-family: 'ClashGrotesk', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: calc(48/12 * 1rem);
+}
+
+/* navigation tab text*/
+h3 {
+    font-family: 'ClashGrotesk', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: calc(16/12 * 1rem);
+}
+
+/* navigation tab text emphasized */
+h3.active {
+    font-size: calc(32/12 * 1rem);
+}
+
+/* answers */
+p {
+    font-family: 'ClashGrotesk', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: calc(24/12 * 1rem);
+}
+
+/* questions are bolded */
+.question {
+    font-weight: 500;
+}
+
+/* links */
+a {
+    font-family: 'ClashGrotesk', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: calc(24/12 * 1rem);
+}
+
+/* link icon size */
+.linkIcon {
+    width: calc(22/12 * 1rem);
+    height: calc(22/12 * 1rem);
+}
+/* /// END OF TYPOGRAPHY /// */
+
+
+
+/* //// OVERALL LAYOUT /// */
+html, body, #sideTabContainer {
+    width: 100%;
+}
+
+#overall {
+    /* set the side tab and the readings beside each other */
+    display: flex;
+    width: 100%;
+}
+
+.readingsSection {
+    width: 85%;
+    display: none;
+}
+
+.readingsSection.active {
+    display: block;
+}
+
+#sideTabContainer {
+    background-color: var(--white);
+    width: 15%;
+    height: 100vh;
+
+    /* fix it to the right */
+    position: fixed;
+    right: 0;
+
+    /* position the tab items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/* /// END OF OVERALL LAYOUT /// */
+
+
+
+/* /// READINGS SECTION LAYOUT /// */
+.readingsSection.active {
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 24px;
+}
+
+.header {
+    border-bottom: 2px solid var(--black);
+    padding: var(--gap2) 0;
+    margin-bottom: var(--gap2);
+    grid-column: 1/-1;
+
+    /* layout inside the header (the article title and link) */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 24px;
+}
+
+.articleTitle {
+    grid-column: 1/5;
+}
+
+
+.articleLink {
+    position: relative;
+    grid-column: 5/-1;
+}
+
+/* set the link to set on the bottom and right of the container */
+.articleLink a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* // TEXT // */
+.question {
+    grid-column: 1/5;
+    margin-bottom: var(--gap3);
+}
+
+.answer {
+    grid-column: 3/7;
+    justify-content: right;
+    margin-bottom: var(--gap1);
+}
+/* /// END OF READINGS SECTION LAYOUT /// */
+
+
+
+/* /// READINGS SECTION BACKGROUND COLORS /// */
+#reading1, #reading1 .header, #reading1 .linkIcon, #reading1 a {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+#reading2, #reading2 .header, #reading2 .linkIcon, #reading2 a {
+    color: var(--black);
+    border-color: var(--black);
+}
+
+#reading3, #reading3 .header, #reading3 .linkIcon, #reading3 a {
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+#reading4, #reading4 .header, #reading4 .linkIcon, #reading4 a {
+    color: var(--green2);
+    border-color: var(--green2);
+}
+
+#reading5, #reading5 .header, #reading5 .linkIcon, #reading5 a {
+    color: var(--yellow2);
+    border-color: var(--yellow2);
+}
+/* /// END OF READINGS SECTION BACKGROUND COLORS /// */
+
+
+
+/* ///SIDE TAB LAYOUT /// */
+/* overall container */
+.sideTab {
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid var(--black);
+    border-bottom: none;
+
+    transition: 0.3s ease-in-out;
+
+    padding: 1.5rem;
+}
+
+/* get rid of first tab top border */
+#tab1 {
+    border-top: none;
+}
+/* ///END OF SIDE TAB LAYOUT /// */
+
+
+/* ///SIDE TAB HOVER STATES /// */
+#tab1:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+#tab2:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#tab3:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
+#tab4:hover {
+    background-color: var(--green2);
+    color: var(--black);
+}
+
+#tab5:hover {
+    background-color: var(--yellow2);
+    color: var(--black);
+}
+/* ///END OF SIDE TAB HOVER STATES /// */
+
+
+
+/* ///SIDE TAB ACTIVE STATES /// */
+
+/* expand the tab */
+.sideTab.active {
+    height: 300%;
+}
+
+/* change to their respective colors for each tab */
+.sideTab.active#tab1{
+    background-color: var(--red);
+}
+
+.sideTab.active#tab2{
+    background-color: var(--black);
+}
+
+.sideTab.active#tab3{
+    background-color: var(--blue);
+}
+
+.sideTab.active#tab4{
+    background-color: var(--green2);
+}
+
+.sideTab.active#tab5{
+    background-color: var(--yellow2);
+}
+
+/* increase font size in the tab */
+h3.active {
+    font-size: calc(32/12 * 1rem);
+}
+
+/* change font color to white for tabs 1 and 2 */
+#tab1 h3.active, #tab2 h3.active {
+    color: var(--white);
+}
+/* ///END OF SIDE TAB ACTIVE STATES /// */
+
+
+/* /// HAMBURGER MENU /// */
+#menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    padding: 10px;
+    z-index: 2;
+}
+
+/* icon div color based on which reading response */
+#menu.red {
+    background-color: var(--red);
+}
+
+#menu.black {
+    background-color: var(--black);
+}
+
+#menu.blue {
+    background-color: var(--blue);
+}
+
+#menu.green {
+    background-color: var(--green2);
+}
+
+#menu.yellow {
+    background-color: var(--yellow2)
+}
+
+/* icon color */
+.material-icons-outlined.white {
+    color: var(--white);
+}
+
+.material-icons-outlined.black {
+    color: var(--black);
+}
+/* /// END OF HAMBURGER MENU /// */
+
+
+
+
+/* ///MEDIA QUERIES /// */
+@media (max-width: 992px){
+
+    html {
+        font-size: 12px;
+    }
+
+    .readingsSection {
+        width: 75%;
+    }
+
+    #sideTabContainer {
+        display: flex;
+        width: 25%;
+    }
+
+    .readingsSection.active {
+        padding: 0 24px;
+        display: block;
+        /* grid-template-columns: repeat(6, 1fr); */
+        /* column-gap: 24px; */
+    }
+
+    .header {    
+        /* layout inside the header (the article title and link) */
+        display: block;
+        /* grid-template-columns: repeat(6, 1fr); */
+        /* column-gap: 24px; */
+        /* background-color: purple; */
+    }
+
+    .articleLink {
+        margin-top: var(--gap4);
+    }
+
+    .articleLink a {
+        position: static;
+    }
+
+    h3.active {
+        font-size: calc(24/12 * 1rem);
+    }
+}
+
+@media (max-width: 768px){
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+    p, a {
+        font-size: 20px
+    }
+
+    #overall {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #sideTabContainer {
+        display: none;
+        width: 50%;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+
+    .readingsSection {
+        width: 100%;
+        /* background-color: green; */
+    }
+
+}
