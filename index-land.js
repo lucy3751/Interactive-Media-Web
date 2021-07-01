@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener("load", function () {
 
     // set #overlay width and height to be always the same as #machine-img
     var vendingMachineImgWidth = $("#machine-img").css("width");
