@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
     // set #overlay width and height to be always the same as #machine-img
-    let vendingMachineImgWidth = $("#machine-img").css("width");
-    let vendingMachineImgHeight = $("#machine-img").css("height");
+    var vendingMachineImgWidth = $("#machine-img").css("width");
+    var vendingMachineImgHeight = $("#machine-img").css("height");
 
     $("#overlay").css("width", `${vendingMachineImgWidth}`);
     $("#overlay").css("height", `${vendingMachineImgHeight}`);
